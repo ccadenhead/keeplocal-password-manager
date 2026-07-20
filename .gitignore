@@ -1,0 +1,13 @@
+# Local vault data
+password_vault.jsonl
+vault_salt.bin
+vault_verify.token
+vault_backups/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Codex workspace metadata
+.agents/
+.codex/

@@ -1,8 +1,23 @@
 # KeepLocal Password Manager
 
-KeepLocal is a local-first password manager prototype for Windows. It keeps saved credentials encrypted on the user's own computer, without cloud sync, online accounts, or recovery backdoors.
+KeepLocal is a local-first password manager prototype for Windows, built with help from Codex and GPT-5.6. It keeps saved credentials encrypted on the user's own computer, without cloud sync, online accounts, or recovery backdoors.
 
 This project was inspired by my son, who wanted a password manager he could trust without relying on an online service.
+
+## Use of Codex and GPT-5.6
+
+Codex and GPT-5.6 were used as development partners throughout this project. I am a professor, not a full-time software engineer, and Codex helped me move from an old beginner Python password generator into a structured, working password manager prototype.
+
+Codex and GPT-5.6 helped with:
+
+- Reasoning through the security model
+- Replacing a stored encryption key with master-password-derived encryption
+- Debugging Windows-specific behavior, including clipboard support
+- Refactoring the app into a command-line interface and reusable vault core
+- Improving terminal messages and demo flow
+- Writing README and submission materials
+
+KeepLocal itself does not use AI at runtime. Passwords, vault files, and user data are not sent to OpenAI or any cloud service.
 
 ## What It Does
 
@@ -52,7 +67,7 @@ vault_core.py            # Vault paths, encryption, records, clipboard, backup/r
 
 KeepLocal is built with Python and the `cryptography` package.
 
-The project started as a simple password generator, then grew into a local password manager. As the app became more serious, the code was split into a command-line interface and a reusable vault core. This makes it easier to build a future graphical Windows version without rewriting the encryption and storage logic.
+The project started as a simple password generator, then grew into a local password manager with Codex and GPT-5.6 helping guide the architecture, debugging, and refactoring process. As the app became more serious, the code was split into a command-line interface and a reusable vault core. This makes it easier to build a future graphical Windows version without rewriting the encryption and storage logic.
 
 ## Requirements
 
@@ -98,6 +113,8 @@ Windows clipboard support also needed special handling. The app now uses Windows
 ## What I Learned
 
 This project taught me more about local encryption, key derivation, backup safety, and the user experience details that matter even in a command-line app. Clear warnings, predictable file locations, and readable terminal output all make the project feel safer and easier to use.
+
+It also showed me how Codex can support a builder with limited coding background: not just by generating snippets, but by helping reason through design decisions, spot bugs, simplify structure, and turn a rough idea into a working prototype.
 
 ## What's Next
 
